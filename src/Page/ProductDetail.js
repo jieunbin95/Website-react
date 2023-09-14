@@ -5,10 +5,12 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
 
 const ProductDetail = () => {
+
   let [product, setProduct] = useState(null);
   let { id } = useParams();
+
   const getProductDetail = async () => {
-    let url = `https://my-json-server.typicode.com/jieunbin95/Website-react/products/?q=${id}`;
+    let url = `https://my-json-server.typicode.com/jieunbin95/Website-react/products/${id}`;
 
     let response = await fetch(url);
     let data = await response.json();
@@ -23,7 +25,7 @@ const ProductDetail = () => {
   return (
     <Container>
       <Row className="product-section">
-        <Col className="product-img">
+        <Col className="product-img" >
           <img src={product?.img} />
         </Col>
 

@@ -102,6 +102,10 @@ body {
   justify-content: flex-end;
 }
 
+.product-img img{
+  width: 400px;
+}
+
 .product-title {
   font-size: 20px;
   margin-bottom: 5px;
