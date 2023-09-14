@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap");
+
+body {
+  font-family: "Noto Serif KR", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.first-bar {
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-button {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.login {
+  margin-right: 5px;
+}
+
+.search {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 20px;
+  height: 20px;
+}
+
+.menu-bar {
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.search-bar {
+  cursor: pointer;
+}
+
+.search input {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+.Nav-section {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-area {
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.underline {
+  height: 2px;
+  width: 200px;
+  background-color: rgb(209, 38, 38);
+  position: absolute;
+  top: 220px;
+}
+
+.menu-list {
+  display: flex;
+  cursor: pointer;
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.menu-list li {
+  margin-right: 20px;
+  font-size: 25px;
+  font-family: "Noto Serif KR", serif;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.product-card {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.img-card {
+  transition: 0.5s;
+}
+
+.img-card:hover {
+  transform: scale(1.1);
+}
+
+.product-section {
+  padding-top: 90px;
+}
+
+.product-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.product-choice {
+  margin-bottom: 10px;
+}
+
+.size-btn {
+  margin-bottom: 10px;
+}
+
+.add-btn button {
+  width: 100%;
+}
+
+@media (max-width: 63rem) {
+  .menu-list {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .login {
+    display: none;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+
+  .search .search-bar{
+    display: none;
+  }
+
+  .search input{
+    display: none;
   }
 }
+
+
+
+  .side-menu {
+    z-index: 1;
+    display: block;
+    background-color: burlywood;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    overflow-x: hidden;
+  }
+
+  .x-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: flex-end;
+  }
+
+  .x-icon {
+    font-size: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .side-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .side-menu-list button {
+    margin: 5px;
+    background: none;
+    width: 120px;
+    border: none;
+  }
+
+  .side-menu-list button:hover {
+    border-bottom: 2px solid white;
+  }
+
+  
