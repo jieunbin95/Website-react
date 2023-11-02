@@ -11,6 +11,7 @@ import { useState } from "react";
 
 const Navbar = ({ authenticate, setAuthenticate }) => {
   let [width, setWidth] = useState(0);
+  const [item,setItem]=useState('')
 
   const navigate = useNavigate();
   const gotoLogin = () => {
@@ -18,14 +19,14 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
   };
 
   const menuList = [
-    "여성",
+    "Woman",
     "Divided",
-    "남성",
-    "신생아/유아",
-    "아동",
-    "H&M Home",
+    "Man",
+    "Infant",
+    "Child",
+    "Home",
     "Sale",
-    "지속가능성",
+    "Sustainability",
   ];
 
   const search = (event) => {
@@ -46,7 +47,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
 
   return (
     <div>
-      <div class="first-bar">
+      <div className="first-bar">
         <div className="login-button" onClick={gotoLogin}>
           {authenticate ? (
             <div onClick={() => setAuthenticate(false)} class="login">
@@ -87,11 +88,10 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
       </div>
 
       <div className="Nav-section" onClick={gotomainpage}>
-        <img
-          width={200}
-          src="https://blog.kakaocdn.net/dn/Yt80C/btqDeJAYUBo/JQbTuukRladq2AUOeqgiEK/img.jpg"
-        />
-      </div>
+        <a className='main' href="/">SHOPPING <span>STUDIO</span></a>
+        <img className='main_image' src="https://i.pinimg.com/564x/4a/ff/25/4aff25a7d0caa43d42b382698836ec02.jpg"/>
+        <img className='main_img' src='https://i.pinimg.com/564x/12/0b/c2/120bc25fc82c3494d7db32f7ee005edd.jpg'/>
+      </div><hr/>
 
       <div className="menu-area">
         <ul className="menu-list">

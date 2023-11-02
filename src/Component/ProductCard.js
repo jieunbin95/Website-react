@@ -13,7 +13,7 @@ const ProductCard = ({item}) => {
     <div className="product-card" onClick={showdetail}>
       <img className="img-card" src={item?.img} alt="여러 제품"/>
       <div>{item.choice?'Conscious choice':''}</div>
-      <div>{item?.title}</div>
+      <div className='title'>{item?.title}</div>
       <div>￦{item?.price}</div>
       <div>{item.new?'신제품':''}</div>
     </div>

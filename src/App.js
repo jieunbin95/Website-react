@@ -22,7 +22,7 @@ function App() {
   let [authenticate,setAuthenticate]=useState(false)
 
   return (
-    <div>
+    <div className='color'>
       <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate}/>
      <Routes>
       <Route path='/' element={<ProductAll/>}/>

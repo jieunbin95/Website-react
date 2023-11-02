@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import { useNavigate } from 'react-router-dom';
-import {useState} from 'react-router-dom'
+
 
 const Login = ({setAuthenticate}) => {
   const navigate=useNavigate()
@@ -15,7 +15,7 @@ const Login = ({setAuthenticate}) => {
   }
 
   return (
-    <Container>
+    <Container style={{margin:'30px auto'}}>
       {/*Form을 사용할 때에는 .preventDefault함수를 사용해 홈페이지가 리프레쉬되는 것을 막아줄 수 있다 */}
     <Form onSubmit={(event)=>loginUser(event)}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -33,7 +33,7 @@ const Login = ({setAuthenticate}) => {
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
-      <Button variant="danger" type="submit">
+      <Button variant="outline-secondary" type="submit">
         Login
       </Button>
     </Form>

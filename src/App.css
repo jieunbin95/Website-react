@@ -1,11 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+html,
+.color{
+  background-color: #FCF6F5;
+  margin: 0;
+}
 
-body {
-  font-family: "Noto Serif KR", serif;
+.Nav-section {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  margin: 0 20px;
+}
+
+.main{
+  text-decoration: none;
+  font-family: 'Libre Baskerville', serif;
+  color: #7b9acc;
+  font-size: 9rem;
+  z-index: 2;
+}
+
+.main_image{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  bottom: 8px;
+  right: 500px;
+  user-select: none;
+  border-radius: 60%;
+  z-index: 1;
+}
+
+.main_img{
+  position: absolute;
+  width: 300px;
+  height: 432px;
+  right: 250px;
+  user-select: none;
+}
+
+.main>span{
+  font-weight: 700;
 }
 
 .first-bar {
   position: relative;
+  margin: 0 20px;
 }
 
 .login-button {
@@ -26,6 +68,7 @@ body {
   bottom: 0;
   margin: auto 20px;
   height: 20px;
+  
 }
 
 .menu-bar {
@@ -42,12 +85,7 @@ body {
   border: none;
   border-bottom: 1px solid black;
   outline: none;
-}
-
-.Nav-section {
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
+  background-color: #FCF6F5;
 }
 
 .menu-area {
@@ -73,7 +111,12 @@ body {
 .menu-list li {
   margin-right: 20px;
   font-size: 25px;
-  font-family: "Noto Serif KR", serif;
+  font-family: 'Edu TAS Beginner', cursive;
+  color: #7b9acc;
+}
+
+.menu-list li:hover {
+  border-bottom: 1px solid #7b9acc;
 }
 
 .container {
@@ -83,7 +126,16 @@ body {
 .product-card {
   margin-bottom: 20px;
   cursor: pointer;
+  font-family: 'Song Myung', serif;
 }
+
+.product-card div{
+  margin-top: 5px;
+}
+
+.product-card .title{
+  color: #7b9acc;
+} 
 
 .img-card {
   transition: 0.5s;
@@ -128,7 +180,7 @@ body {
   width: 100%;
 }
 
-@media (max-width: 63rem) {
+@media (max-width: 740px) {
   .menu-list {
     display: none;
   }
@@ -147,6 +199,21 @@ body {
 
   .search input{
     display: none;
+  }
+
+  .main{
+    color: #7b9acc;
+    font-size: 5rem;
+  }
+
+  .main_img{
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .main_image{
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
