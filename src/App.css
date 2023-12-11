@@ -8,17 +8,19 @@ html,
 
 .Nav-section {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  width: 80%;
+  margin: 0 auto;
   cursor: pointer;
   position: relative;
-  margin: 0 20px;
 }
 
 .main{
   text-decoration: none;
   font-family: 'Libre Baskerville', serif;
   color: #7b9acc;
-  font-size: 9rem;
+  font-size: 8rem;
   z-index: 2;
 }
 
@@ -26,8 +28,8 @@ html,
   position: absolute;
   width: 250px;
   height: 300px;
+  right: 200px;
   bottom: 8px;
-  right: 500px;
   user-select: none;
   border-radius: 60%;
   z-index: 1;
@@ -35,9 +37,9 @@ html,
 
 .main_img{
   position: absolute;
-  width: 300px;
-  height: 432px;
-  right: 250px;
+  width: 250px;
+  height: 380px;
+  right: 0;
   user-select: none;
 }
 
@@ -220,7 +222,7 @@ html,
 
 
   .side-menu {
-    z-index: 1;
+    z-index: 3;
     display: block;
     background-color: burlywood;
     width: 250px;
